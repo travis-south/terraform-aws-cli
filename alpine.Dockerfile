@@ -8,7 +8,7 @@ ARG TERRAFORM_VERSION
 RUN apk update
 RUN apk add curl=7.64.0-r3
 RUN apk add unzip=6.0-r4
-RUN apk add gnupg=2.2.12-r0
+RUN apk add gnupg=2.2.19-r0
 RUN curl -Os https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_SHA256SUMS
 RUN curl -Os https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip
 RUN curl -Os https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_SHA256SUMS.sig
