@@ -1,6 +1,6 @@
 # Setup build arguments with default versions
-ARG AWS_CLI_VERSION=1.16.177
-ARG TERRAFORM_VERSION=0.12.2
+ARG AWS_CLI_VERSION=1.16.273
+ARG TERRAFORM_VERSION=0.12.8
 
 # Download Terraform binary
 FROM debian:stretch-20190506-slim as terraform
@@ -23,7 +23,7 @@ FROM debian:stretch-20190506-slim as aws-cli
 ARG AWS_CLI_VERSION
 RUN apt-get update
 RUN apt-get install -y python3=3.5.3-1
-RUN apt-get install -y python3-pip=9.0.1-2+deb9u1
+RUN apt-get install -y python3-pip=9.0.1-2+deb9u2
 RUN pip3 install awscli==${AWS_CLI_VERSION}
 
 # Build final image
