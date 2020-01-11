@@ -35,9 +35,11 @@ RUN apk --no-cache add \
   groff=1.22.3-r2 \
   jq=1.6-r0 \
   python3=3.6.9-r2 \
+  curl \
   && ln -s /usr/bin/python3 /usr/bin/python
 COPY --from=terraform /terraform /usr/bin/terraform
 COPY --from=aws-cli /usr/bin/aws* /usr/bin/
 COPY --from=aws-cli /usr/lib/python3.6/site-packages /usr/lib/python3.6/site-packages
 WORKDIR /workspace
 CMD ["bash"]
+
