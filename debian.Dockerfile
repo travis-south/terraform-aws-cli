@@ -33,6 +33,7 @@ RUN apt-get update \
     ca-certificates=20161130+nmu1+deb9u1 \
     jq=1.5+dfsg-1.3 \
     python3=3.5.3-1 \
+    docker \
     curl \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* \
